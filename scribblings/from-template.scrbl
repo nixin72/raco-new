@@ -15,11 +15,11 @@ All templates are use non-restrictive Apache2/MIT licences so you can use them i
 
 @section{Download/Install}
 
-In DrRacket, in File|Package manager|Source, enter @tt{raco-new}.
+In DrRacket, in File|Package manager|Source, enter @tt{new}.
 
 Or, on the command line, type:
 
-@tt{raco pkg install raco-new}
+@tt{raco pkg install new}
 
 
 @section{Usage}

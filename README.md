@@ -8,10 +8,10 @@ Ensure that `raco` is on your path
 
 Run the `raco` command:
 ```bash
-raco pkg install raco-new
+raco pkg install new
 ```
 
-Or you can install from DrRacket by looking for `raco-new` under **File|Package Manager**
+Or you can install from DrRacket by looking for `new` under **File|Package Manager**
 
 # Usage
 
@@ -44,7 +44,7 @@ By making a contribution, you are agreeing that your contribution is licensed un
 ## get started
 
 ```
-git clone git@github:nixin72/raco-new.git
+git clone git@github:racket-templates/raco-new.git
 cd raco-new
 raco pkg install
 ```
