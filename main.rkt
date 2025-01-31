@@ -15,9 +15,9 @@
  print-templates
  list-templates)
 
-(define-runtime-path windows-script "from-template.bat")
-(define-runtime-path macosx-script "from-template.sh")
-(define-runtime-path linux-script "from-template.sh")
+(define-runtime-path windows-script "raco-new.bat")
+(define-runtime-path macosx-script "raco-new.sh")
+(define-runtime-path linux-script "raco-new.sh")
 
 (define normal "\033[0m")
 (define [color color strs] (string-append color (string-join strs " ") normal))
@@ -144,7 +144,7 @@
 (module+ main
   (define cli-args
     (command-line
-     #:program "from-template"
+     #:program "raco-new"
      #:once-any
      [("-l" "--list")
       "Lists all available templates to clone"
@@ -162,7 +162,7 @@
                         (displayln e)
                         (displayln "\n\nHmm, an unexpected error has occured...")
                         (displayln "If you'd like, we'd really appreciate it if you filed a bug report at")
-                        (displayln "https://github.com/nixin72/from-template/issues/new")
+                        (displayln "https://github.com/racket-templates/raco-new/issues/new")
                         (displayln "\nSorry for the inconvenience, please try again and change up your options if the problem persists."))])
        (cond
          [(listing?) (print-templates args)]

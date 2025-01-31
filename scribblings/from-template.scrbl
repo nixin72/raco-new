@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@title{from-template}
+@title{raco-new}
 
 @author{nixin72}
 
@@ -8,18 +8,18 @@ This package adds the capability to create new Racket application from a set of 
 starter templates hosted at
 @hyperlink["https://github.com/racket-templates"]{https://github.com/racket-templates}.
 
-The @tt{from-template} command this package adds to the Racket @tt{raco} command line tools clones the
+The @tt{raco new} command this package adds to the Racket @tt{raco} command line tools clones the
 chosen template and removes the git history to provide you with a fresh start.
 
 All templates are use non-restrictive Apache2/MIT licences so you can use them in your own project freely.
 
 @section{Download/Install}
 
-In DrRacket, in File|Package manager|Source, enter @tt{from-template}.
+In DrRacket, in File|Package manager|Source, enter @tt{raco-new}.
 
 Or, on the command line, type:
 
-@tt{raco pkg install from-template}
+@tt{raco pkg install raco-new}
 
 
 @section{Usage}
@@ -39,12 +39,3 @@ Install a template by including the template name and a destination folder.
 If no destination path is provided the template is installed in the current folder.
 
 @tt{% raco new <template-name>}
-
-
-The legacy command is still available;
-
-@tt{% raco from-template <template-name> <destination-dir>}
-
-
-
-
