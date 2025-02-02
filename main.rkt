@@ -11,7 +11,7 @@
 (module+ main
   (define cli-args
     (command-line
-     #:program "new"
+     #:program "raco new"
      #:once-any
      [("-l" "--list")
       "Lists all available templates to clone"
