@@ -30,8 +30,6 @@
         [(listing?) (print-templates)]
         [else
          (match args
-           ;; TODO: Should we be able to initialize an empty repository as a racket project?
-           ;; npm init sorta thing, where it'll create a package.json in an empty directory
            [(list)
             (define cmd-name (short-program+command-name))
             (define help-command
