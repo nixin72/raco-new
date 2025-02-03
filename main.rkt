@@ -2,6 +2,8 @@
 
 (require racket/match
          racket/cmdline
+         racket/system
+         raco/command-name
          "src/list.rkt"
          "src/clone.rkt"
          "src/error.rkt")
@@ -30,7 +32,13 @@
          (match args
            ;; TODO: Should we be able to initialize an empty repository as a racket project?
            ;; npm init sorta thing, where it'll create a package.json in an empty directory
-           [(list) (print-templates)]
+           [(list)
+            (define cmd-name (short-program+command-name))
+            (define help-command
+              (if (string=? "raco" (substring cmd-name 0 4))
+                "raco new --help"
+                (format "racket ~a --help" cmd-name)))
+            (system help-command)]
            [(list repo) (clone-repo repo repo)]
            [(list repo dir) (clone-repo repo dir)]
            ;; Errors
