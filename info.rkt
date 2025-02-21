@@ -1,13 +1,13 @@
 #lang info
 
 (define collection "raco-new")
-(define version "1.1")
+(define version "1.0")
 (define pkg-authors '(nixin72))
 (define pkg-desc "Download template apps to get started building new projects with Racket")
 (define scribblings '(("scribblings/raco-new.scrbl" ())))
 
 (define deps
-  '("base" "readline" "http-easy"))
+  '("base" "readline" "http-easy" "threading"))
 
 (define build-deps
   '("racket-doc"
@@ -17,4 +17,4 @@
 (define raco-commands
   '(("new"
      (submod raco-new main)
-     "Install a repo from a template at racket-templates" 50)))
+     "Create a new Racket project from a template at github.com/racket-templates" 50)))
